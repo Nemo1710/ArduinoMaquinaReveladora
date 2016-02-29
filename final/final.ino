@@ -32,8 +32,9 @@ long tiempo_actual=0;
 long previousMillis = 0;
 long interval = 120000;
 int var=1;
-int valmotores=0;
 int valcepillos=0;
+int valmotores=0;
+
 int valor=0;
 String mijitrin;
 void setup() { 
@@ -54,7 +55,7 @@ Serial1.begin(9600);
 Serial1.println("9");
 digitalWrite(recirculacion,LOW); 
 digitalWrite(niquelinarevelador,LOW); 
-valmotores=255;
+    valmotores=255;
      valcepillos=255;
     digitalWrite(recirculacion,LOW); 
     digitalWrite(recirculacion,LOW); 
@@ -163,7 +164,7 @@ switch(var){
   
   case 2:
   detener();
-     valmotores=145;
+     valmotores=125;
      valcepillos=180;
     analogWrite(motortransporte,valmotores);
     analogWrite(motorcepillos,valcepillos);
@@ -313,13 +314,13 @@ void retardo(int total){
     if(digitalRead(eplaca)==LOW && var==3){
       tiempo=valoreal-tottal;
       if(tiempo>=0 && tiempo<14){
-        tottal=tottal+10;  
+        tottal=tottal+17;  
       }else if(tiempo>=14 && tiempo<30){
-        tottal=tottal+20;  
+        tottal=tottal+27;  
       }else if(tiempo>=30 && tiempo<45){
-        tottal=tottal+30;  
+        tottal=tottal+37;  
       }else if(tiempo<=0){
-        tottal=190;  
+        tottal=210;  
       }
       else{
         tottal=tottal+40;  
@@ -360,7 +361,7 @@ void impresion(){
     gom=0;
   }
   
-  if(valmotores==145){
+  if(valmotores==125){
     trans=1;
   }else{
     trans=0;
