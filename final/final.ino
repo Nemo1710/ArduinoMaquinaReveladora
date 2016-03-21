@@ -164,12 +164,12 @@ switch(var){
   
   case 2:
   detener();
-     valmotores=125;
+     valmotores=118;
      valcepillos=180;
     analogWrite(motortransporte,valmotores);
     analogWrite(motorcepillos,valcepillos);
     digitalWrite(reabastecimiento,HIGH);
-    retardo(2);
+    retardo(1);
     digitalWrite(reabastecimiento,LOW);
     retardo(20);
     var=3;
@@ -305,8 +305,8 @@ void retardo(int total){
     int h=0;
     if(tottal==130){
       digitalWrite(reabastecimiento,HIGH);
-      delay(1500);
-    
+      delay(250);
+      digitalWrite(reabastecimiento,LOW);    
       
      }else{
       digitalWrite(reabastecimiento,LOW);
@@ -361,7 +361,7 @@ void impresion(){
     gom=0;
   }
   
-  if(valmotores==125){
+  if(valmotores==118){
     trans=1;
   }else{
     trans=0;
